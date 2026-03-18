@@ -14,5 +14,7 @@ document.write(Trail); // This writes the content of variable Trail to the docum
 
 document.write(2 + 2); // This writes the result of the expression 2 + 2 to the document, which will display "4" on the webpage. The + operator is used here to perform addition on the two numbers 2 and 2, resulting in 4.
 
-
+function myFunction() { 
+document.getElementById("practice").innerHTML = Date();}
+    // This is a function that changes the content of the element with id 'practice'.;
 
