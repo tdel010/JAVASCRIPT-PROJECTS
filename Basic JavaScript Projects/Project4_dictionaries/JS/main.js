@@ -1,13 +1,13 @@
 function bike_dictionary() { // Creates a dictionary with properties of a bike 
     var bike = {
-        make: "Honda",
-        model: "CB500x",
+        make: "Specialized",
+        model: "Turbo Levo",
         color: "white",
         year: 2014,
         type: "adventure"
     };
 
-    delete bike.model; // Deletes a  property from the bike dictionary
+    var message = "My favorite bike brand is " + bike.make;
    
-    document.getElementById ("Dictionary").innerHTML = bike.model;  //Tries to display the delted property
+    document.getElementById ("Dictionary").innerHTML = message;
 }
