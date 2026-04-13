@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Form Challenge</title>
+        <link rel="stylesheet" href="CSS/CSS_1.css">
+    </head>
+
+    <body>
+        <h1>Contact Form Challenge</h1>
+        <h3>Fill out the form below and click submit to see your input displayed on the page!</h3>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+
+        <p id="output"></p>
+
+        <script src="JavaScript/JavaScript_2.js"></script>
+
+    </body>
+
+    </html>

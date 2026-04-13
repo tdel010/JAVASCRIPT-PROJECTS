@@ -1,0 +1,46 @@
+/*This container includes our table and our canvas.*/
+.center-container {
+    width: 608px;
+    /* Sets the width of the container*/
+    margin: 0 auto;
+    /* Centers the container horizontally on the page*/
+    margin-top: 50px;
+    /* Adds a top margin of 50 pixels to create space above the container*/
+}
+
+h1.center-container {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    /* Collapses the borders of the table cells into a single border*/
+    border-style: hidden;
+    /* Hides the borders of the table*/
+    margin-bottom: 20px;
+    /* Adds a bottom margin of 20 pixels to create space below the table*/
+}
+
+td {
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over the table cells, indicating they are clickable*/
+    border: 4px solid rgba(252, 3, 24, 0.8);
+    /* Adds a border around each table cell*/
+    padding: 0;
+    /* Removes any default padding from the table cells*/
+    width: 200px;
+    /* Sets the width of each table cell to 200 pixels*/
+    height: 200px;
+    /* Sets the height of each table cell to 200 pixels*/
+    filter: contrast(3);
+    /* Increases the contrast of the table cells, making them more visually distinct*/
+}
+
+canvas {
+    /*This property sets the position of our canvas to the top left corner of our container.*/
+    position: absolute;
+    /*This property sets the z-index of our canvas to 1, which means it will be displayed above any other elements with a lower z-index value (such as our table).*/
+    z-index: 10;
+    /*This property disables pointer events on the canvas, allowing clicks to pass through it and interact with the underlying table cells.*/
+    pointer-events: none;
+    
