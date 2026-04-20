@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pizza Drill Demo</title>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src="Pizza_JavaScript/Pizza.js" defer></script>
+    <link href="Pizza_CSS/Pizza.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="menuBG">
+        <h1 style="margin: 0 0 px 0 20px;">Pizza Drill Tutorial</h1>
+        <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+        <form id="frmMenu">
+            <div class="menu left">
+                <h3>Size:</h3>
+                <label class="noWrapOption"><input class="size" type="radio" name="Size" value="Personal Pizza">Personal Pizza</label><br>
+                <label class="noWrapOption"><input class="size" type="radio" name="Size" value="Small Pizza">Small Pizza</label><br>
+                <label class="noWrapOption"><input class="size" type="radio" name="Size" value="Medium Pizza">Medium Pizza</label><br>
+                <label class="noWrapOption"><input class="size" type="radio" name="Size" value="Large Pizza">Large Pizza</label><br>
+                <label class="noWrapOption"><input class="size" type="radio" name="Size" value="Extra Large Pizza">Extra Large Pizza</label><br>
+            </div>
+            <div class="menu center">
+                <h3>Meats:</h3>
+                <label class="noWrapOption"><input class="meats" type="checkbox" name="Meat" value="Pepperoni">Pepperoni</label><br>
+                <label class="noWrapOption"><input class="meats" type="checkbox" name="Meat" value="Sausage">Sausage</label><br>
+                <label class="noWrapOption"><input class="meats" type="checkbox" name="Meat" value="Canadian Bacon">Canadian Bacon</label><br>
+                <label class="noWrapOption"><input class="meats" type="checkbox" name="Meat" value="Ground Beef">Ground Beef</label><br>
+                <label class="noWrapOption"><input class="meats" type="checkbox" name="Meat" value="Anchovy">Anchovy</label><br>
+                <label class="noWrapOption"><input class="meats" type="checkbox" name="Meat" value="Chicken">Chicken</label><br>
+                <label class="noWrapOption"><input class="meats" type="checkbox" name="Meat" value="Ham">Ham</label><br>
+            </div>
+            <div class="menu right">
+                <h3>Vegetables:</h3>
+                <label class="noWrapOption"><input class="veggies" type="checkbox" name="Veggie" value="Mushrooms">Mushrooms</label><br>
+                <label class="noWrapOption"><input class="veggies" type="checkbox" name="Veggie" value="Onions">Onions</label><br>
+                <label class="noWrapOption"><input class="veggies" type="checkbox" name="Veggie" value="Tomatoes">Tomatoes</label><br>
+                <label class="noWrapOption"><input class="veggies" type="checkbox" name="Veggie" value="Olives">Olives</label><br>
+                <label class="noWrapOption"><input class="veggies" type="checkbox" name="Veggie" value="Green Peppers">Green Peppers</label><br>
+            </div>
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
