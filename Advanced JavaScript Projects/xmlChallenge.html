@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML Challenge</title>
+</head>
+
+<body>
+    <p id="XML_Example"></p>
+    <script>
+        var XML_Parser, XML_Document;
+
+        //Creates a text string
+        var Bike = "<bike>" +
+            "<brand>Specialized</brand>" +
+            "<model>Allez</model>" +
+            "<year>2020</year>" +
+            "<color>Red</color>" +
+            "<price>1000</price>" +
+            "</bike>";
+
+        //Creates a new XML DOM parser
+        XML_Parser = new DOMParser();
+
+        //Creates a new XML document from the text string
+        XML_Document = XML_Parser.parseFromString(Bike, "text/xml");
+
+        //If parsing succeeds, display the value of the <brand> element
+        document.getElementById("XML_Example").innerHTML =
+        XML_Document.getElementsByTagName("brand")[0].childNodes[0].nodeValue;
+        
+    </script>
+</body>
+
+</html>
