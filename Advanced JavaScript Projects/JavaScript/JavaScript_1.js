@@ -56,3 +56,4 @@ ctx.fillRect(10, 10, 180, 180); // Draws a filled rectangle on the canvas at the
 ctx.font = "20px Arial";
 ctx.fillStyle = "white";
 ctx.fillText("Bikes are cool!", 30, 100); // Draws the text "Bikes are cool!" on the canvas at the coordinates (30, 100) with the specified font and fill style
+
