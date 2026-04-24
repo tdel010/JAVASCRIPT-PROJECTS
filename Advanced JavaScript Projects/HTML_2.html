@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Form Challenge</title>
-        <link rel="stylesheet" href="CSS/CSS_1.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Challenge</title>
+    <link rel="stylesheet" href="JavaScript/CSS/CSS_1.css">
+</head>
 
-    <body>
-        <h1>Contact Form Challenge</h1>
-        <h3>Fill out the form below and click submit to see your input displayed on the page!</h3>
-        <form id="contactForm">
+<body>
+    <h1>Contact Form Challenge</h1>
+    <h3>Click the "Open Form" button below to fill out the form and click submit to see your input displayed on the page!</h3>
+    
+    <!-- The form is hidden by default and will be displayed when the "Open Form" button is clicked -->
+    <button class="open-button" onclick="openForm()">Open Form</button>
+    <div class="form-popup" id="contactForm">
+        <form action="/action_page.php" class="form-container" name="contactForm">
+            <p id="output" class="form-message"></p>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name"><br><br>
             <label for="email">Email:</label>
@@ -23,10 +28,8 @@
             <button type="button" onclick="submitForm()">Submit</button>
         </form>
 
-        <p id="output"></p>
-
         <script src="JavaScript/JavaScript_2.js"></script>
+    </div>
+</body>
 
-    </body>
-
-    </html>
+</html>

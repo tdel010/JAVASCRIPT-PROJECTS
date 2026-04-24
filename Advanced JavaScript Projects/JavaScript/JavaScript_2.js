@@ -30,9 +30,22 @@ function validateForm() { // Trimmed values to prevent empty spaces from being c
         data: {
             name: name,
             email: email,
+            phone: phone,
             message: message
         }
     };
+}
+
+function openForm() { // Function to display the form when the "Open Form" button is clicked
+    document.getElementById("contactForm").style.display = "block";
+
+    var output = document.getElementById("output");
+    output.textContent = "";
+    output.style.display = "none";
+}
+
+function closeForm() { // Function to hide the form when the "Close" button is clicked
+    document.getElementById("contactForm").style.display = "none";
 }
 
 function submitForm() { // Call the validateForm function to check the form data and get the result
@@ -42,13 +55,18 @@ function submitForm() { // Call the validateForm function to check the form data
     if (!result.isValid) { // If the form is not valid, display the error message in red 
         output.textContent = result.error;
         output.style.color = "#b00020";
+        output.style.backgroundColor = "#f8d7da";
+        output.style.display = "block";
         return;
     }
 
     output.style.color = "#1a1a1a"; // If the form is valid, display the submitted data
+    output.style.backgroundColor = "#d4edda";
+    output.style.display = "block";
     output.innerHTML = "<strong>Form Submitted!</strong><br>" +
         "Name: " + escapeHtml(result.data.name) + "<br>" +
         "Email: " + escapeHtml(result.data.email) + "<br>" +
+        "Phone: " + escapeHtml(result.data.phone) + "<br>" +
         "Message: " + escapeHtml(result.data.message);
 }
 
