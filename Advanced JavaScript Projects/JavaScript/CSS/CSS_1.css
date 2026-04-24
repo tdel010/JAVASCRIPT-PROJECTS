@@ -38,7 +38,7 @@ button[type=button]:hover {
     background-color: #45a049;
 }
 
-/* The "Open Form" button fixed at the bottom of the page*/
+/* Keep the Open Form button pinned to the top while scrolling */
 .open-button {
     background-color: #555;
     color: white;
@@ -46,10 +46,11 @@ button[type=button]:hover {
     border: none;
     cursor: pointer;
     opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     width: 280px;
+    margin: 10px 0 20px 0;
 }
 
 /*The popup form - hidden by default */
@@ -117,4 +118,10 @@ button[type=button]:hover {
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
     opacity: 1;
+}
+
+.scroll-content {
+    max-width: 800px;
+    line-height: 1.6;
+    padding: 10px 0 40px;
 }
