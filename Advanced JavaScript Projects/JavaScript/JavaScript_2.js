@@ -1,6 +1,7 @@
 function validateForm() { // Trimmed values to prevent empty spaces from being considered valid input
     var name = document.forms["contactForm"]["name"].value.trim();
     var email = document.forms["contactForm"]["email"].value.trim();
+    var phone = document.forms["contactForm"]["phone"].value.trim();
     var message = document.forms["contactForm"]["message"].value.trim();
 
     if (name === "") { // Check if the name field is empty after trimming
@@ -11,6 +12,9 @@ function validateForm() { // Trimmed values to prevent empty spaces from being c
         return { isValid: false, error: "Please enter your email." };
     }
 
+    if (phone === "") { // Check if the phone field is empty after trimming
+        return { isValid: false, error: "Please enter your phone number." };
+    }
 
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Validate email format using a regular expression
     if (!emailPattern.test(email)) { // If the email does not match the pattern, return an error message
