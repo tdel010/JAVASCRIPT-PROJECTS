@@ -7,3 +7,19 @@ body.fade-out {
     opacity: 0;
     transition: none;
 }
+
+#myCanvas {
+    display: block;
+    position: relative;
+    animation: bike-box-sway 3s ease-in-out infinite alternate;
+}
+
+@keyframes bike-box-sway {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(160px);
+    }
+}
